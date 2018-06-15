@@ -1,25 +1,35 @@
+/*global $*/
 import './main.css';
 
-class MainCtrl {
+class MainControler {
 
-    constructor(){
-        this.title = 'HelloWorld!!!';
+	constructor() {
+		this.title = 'HelloWorld!!!';
 
-        $('#teste').kendoComboBox({
-            dataSource: {
-                data: [1,2,3]
-            }
-        });
-    }
+		$('#teste').kendoComboBox({
+			dataSource: {
+				data: [1, 2, 3]
+			}
+		});
 
-    getComboOptions(){
-        return {
-            dataSource: {
-                data: [1,2,3]
-            }
-        }
-    }
+	}
+
+	async teste() {
+		return await new Promise(resolve => resolve('teste3'));
+	}
+
+	/**
+	 * Retorna as opções do combo
+	 * @returns {{dataSource: {data: number[]}}} - Opções do combo
+	 */
+	getComboOptions() {
+		return {
+			dataSource: {
+				data: [1, 2, 3]
+			}
+		};
+	}
 
 }
 
-export default MainCtrl;
+export default MainControler;

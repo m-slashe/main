@@ -3,7 +3,7 @@ const merge = require('webpack-merge');
 
 let karmaWebpackConfig = merge(webpackConfig, {
     mode: 'development',
-    devtool: 'inline-source-map',
+    devtool: 'cheap-module-source-map',
     module: {
         rules: [
             {
@@ -30,13 +30,14 @@ module.exports = function (config) {
             'tests/index.js': ['webpack', 'sourcemap']
         },
         webpack: karmaWebpackConfig,
-        reporters: ['spec', 'coverage'],
+        reporters: ['spec'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
         plugins: [
+            'karma-phantomjs-launcher',
             'karma-chrome-launcher',
             'karma-jasmine',
             'karma-spec-reporter',

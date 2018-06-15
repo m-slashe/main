@@ -1,23 +1,28 @@
 import config from './config';
 import MainCtrl from './main/controller';
+import AnotherCtrl from './another/another.controller';
 
-import(/* webpackChunkName: "font-awesome"*/ 'font-awesome/css/font-awesome.min.css');
+import 'font-awesome/css/font-awesome.min.css';
 
-import(/* webpackChunkName: "jquery" */ 'jquery');
-import(/* webpackChunkName: "angular" */ 'angular').then(async angular => {
-    await import(/* webpackChunkName: "kendo-core"*/ '@progress/kendo-ui/js/kendo.ui.core');
-    await import(/* webpackChunkName: "kendo-combobox"*/ '@progress/kendo-ui/js/kendo.combobox');
+import 'jquery';
 
-    import(/* webpackChunkName: "kendo-css-common"*/ '@progress/kendo-ui/css/web/kendo.common.min.css');
-    import(/* webpackChunkName: "kendo-css-theme"*/ '@progress/kendo-ui/css/web/kendo.metroblack.min.css');
+import angular from 'angular';
 
-    import(/* webpackChunkName: "kendo-angular"*/ '@progress/kendo-ui/js/kendo.angular');
-    await import(/* webpackChunkName: "ui-router" */ 'angular-ui-router');
-    const loginModule = await import(/* webpackChunkName: "login" */ '../login/index');
+import '@progress/kendo-ui/js/kendo.ui.core';
 
-    angular.module('main', ['ui.router', loginModule.default])
-        .config(config)
-        .controller('MainCtrl', MainCtrl);
+import '@progress/kendo-ui/js/kendo.combobox';
 
-    angular.bootstrap(window.document, ['main']);
-});
+import '@progress/kendo-ui/css/web/kendo.common.min.css';
+import '@progress/kendo-ui/css/web/kendo.metroblack.min.css';
+
+import '@progress/kendo-ui/js/kendo.angular';
+import 'angular-ui-router';
+
+import loginModule from '../login/index';
+
+angular.module('main', ['ui.router', loginModule.default])
+	.config(config)
+	.controller('MainCtrl', MainCtrl)
+	.controller('AnotherCtrl', AnotherCtrl);
+
+angular.bootstrap(window.document, ['main']);
