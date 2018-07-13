@@ -13,7 +13,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run seila"
+      "pre-commit": "npm run seila",
+      "post-commit": "npm run lint"
     }
   },
   "author": "",
