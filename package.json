@@ -8,11 +8,12 @@
     "test": "karma start",
     "start": "webpack-dev-server --inline --hot --open --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint src/**/*.js --fix"
+    "lint": "eslint src/**/*.js --fix",
+    "seila": "echo 55"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run seila"
     }
   },
   "author": "",
