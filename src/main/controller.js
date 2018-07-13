@@ -1,14 +1,15 @@
 /*global $*/
 import './main.css';
+import Data from './data';
 
 class MainControler {
 
-	constructor() {
+	constructor($log) {
 		this.title = 'HelloWorld!!!';
-		console.log('teste1');
+		$log.log('teste1');
 		$('#teste').kendoComboBox({
 			dataSource: {
-				data: [1, 2, 3]
+				data: Data
 			}
 		});
 
@@ -25,11 +26,12 @@ class MainControler {
 	getComboOptions() {
 		return {
 			dataSource: {
-				data: [1, 2, 3]
+				data: Data
 			}
 		};
 	}
 
 }
 
+MainControler.$inject = ['$log'];
 export default MainControler;

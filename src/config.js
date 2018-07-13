@@ -1,3 +1,4 @@
+/*eslint require-jsdoc: 0*/
 import mainTemplate from './main/template.html';
 
 function config($stateProvider) {

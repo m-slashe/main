@@ -1,3 +1,4 @@
+/*eslint no-magic-numbers: 0*/
 /*global describe beforeEach inject it expect*/
 import angular from 'angular';
 
