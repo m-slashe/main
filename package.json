@@ -7,7 +7,13 @@
     "docs": "documentation build src/** -f html -o docs",
     "test": "karma start",
     "start": "webpack-dev-server --inline --hot --open --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "lint": "eslint src/**/*.js --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "author": "",
   "license": "ISC",

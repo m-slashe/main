@@ -53,17 +53,8 @@
     "no-trailing-spaces": [
       2
     ],
-    "require-jsdoc": [
-      2
-    ],
-    "sort-keys": [
-      2
-    ],
-    "arrow-spacing": [
-      2
-    ],
-    "prefer-template": [
-      2
-    ]
+    "require-jsdoc": 2,
+    "arrow-spacing": 2,
+    "prefer-template": 2
   }
 }

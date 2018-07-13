@@ -11,7 +11,7 @@ class AnotherCtrl {
 		return numero + numero2;
 	}
 
-	/**	
+	/**
 	*Subtrai o segundo valor do primeiro
 	*@param {number} first - Primeiro valor
 	*@param {number} second - Segundo valor

@@ -2,13 +2,13 @@ import mainTemplate from './main/template.html';
 
 function config($stateProvider) {
 
-    $stateProvider
-        .state('login.main',{
-            url: '/main',
-            template: mainTemplate,
-            controller: 'MainCtrl',
-            controllerAs: 'main'
-        });
+	$stateProvider
+		.state('login.main', {
+			url: '/main',
+			template: mainTemplate,
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		});
 
 }
 
