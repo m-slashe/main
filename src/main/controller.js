@@ -5,7 +5,7 @@ class MainControler {
 
 	constructor() {
 		this.title = 'HelloWorld!!!';
-
+		console.log('teste');
 		$('#teste').kendoComboBox({
 			dataSource: {
 				data: [1, 2, 3]
