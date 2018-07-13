@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --inline --hot --open --mode development",
     "build": "webpack --mode production",
     "lint": "eslint src/**/*.js --fix",
-    "seila": "echo 555555"
+    "seila": "echo 5555555"
   },
   "husky": {
     "hooks": {
