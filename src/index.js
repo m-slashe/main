@@ -1,12 +1,12 @@
+import angular from 'angular';
+
 import config from './config';
-import MainCtrl from './main/controller';
-import AnotherCtrl from './another/another.controller';
+import MainCtrl from './components/main/controller';
+import AnotherCtrl from './components/another/another.controller';
 
 import 'font-awesome/css/font-awesome.min.css';
 
 import 'jquery';
-
-import angular from 'angular';
 
 import '@progress/kendo-ui/js/kendo.ui.core';
 

@@ -1,5 +1,4 @@
 class AnotherCtrl {
-
 	/**
 	 * Função que soma dois numeros
 	 * @param {string} numero - Numero 1
@@ -7,7 +6,7 @@ class AnotherCtrl {
 	 * @returns {number} - Valores somados
 	 * @see {@link https://www.google.com/}
 	 */
-	soma(numero, numero2) {
+	static soma(numero, numero2) {
 		return numero + numero2;
 	}
 
@@ -17,10 +16,9 @@ class AnotherCtrl {
 	*@param {number} second - Segundo valor
 	*@returns {number} - Resultado
 	*/
-	subtrai(first, second){
+	static subtrai(first, second) {
 		return first - second;
 	}
-
 }
 
 export default AnotherCtrl;

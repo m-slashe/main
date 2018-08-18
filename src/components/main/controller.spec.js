@@ -1,16 +1,15 @@
-/*eslint no-magic-numbers: 0*/
-/*global describe beforeEach inject it expect*/
+/* global inject */
+/* eslint no-magic-numbers: 0 */
 import angular from 'angular';
 
-describe('Main', function () {
-
+describe('Main', () => {
 	beforeEach(angular.mock.module('main'));
 
 	beforeEach(inject(function ($rootScope, $controller) {
-		let $scope = $rootScope.$new();
+		const $scope = $rootScope.$new();
 
 		this.controller = $controller('MainCtrl', {
-			$scope
+			$scope,
 		});
 	}));
 
@@ -18,8 +17,7 @@ describe('Main', function () {
 		expect(this.controller.title).toBe('HelloWorld!!!');
 	});
 
-	it('Deve suportar async await', async function () {
+	it('Deve suportar async await', async () => {
 		await new Promise(resolve => setTimeout(resolve, 1000));
 	});
-
 });
