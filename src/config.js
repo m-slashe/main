@@ -6,7 +6,7 @@ function config($stateProvider) {
 		.state('login.main', {
 			url: '/main',
 			template: mainTemplate,
-			controller: 'MainCtrl',
+			controller: 'MainController',
 			controllerAs: 'main',
 		});
 }

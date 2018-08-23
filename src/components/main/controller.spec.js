@@ -5,8 +5,9 @@ import angular from 'angular';
 describe('Main', () => {
 	beforeEach(angular.mock.module('main'));
 
-	beforeEach(inject(function ($rootScope, $controller) {
+	beforeEach(inject(function ($rootScope, $controller, $timeout) {
 		const $scope = $rootScope.$new();
+		this.$timeout = $timeout;
 
 		this.controller = $controller('MainCtrl', {
 			$scope,
@@ -17,7 +18,7 @@ describe('Main', () => {
 		expect(this.controller.title).toBe('HelloWorld!!!');
 	});
 
-	it('Deve suportar async await', async () => {
-		await new Promise(resolve => setTimeout(resolve, 1000));
+	it('Deve suportar async await', async function () {
+		await new Promise(resolve => this.$timeout(resolve, 1000));
 	});
 });

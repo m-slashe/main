@@ -9,8 +9,9 @@ console.log(`Utilizando ${hash}`);
 module.exports = {
 	entry: {
 		'babel-polyfill': 'babel-polyfill',
-		main: './src/index.js',
+		main: './src/main.js',
 	},
+	devtool: 'sourcemap',
 	output: {
 		filename: `[name].[${hash}].js`,
 	},
@@ -29,7 +30,7 @@ module.exports = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['env', 'flow'],
-						plugins: ['syntax-dynamic-import'],
+						plugins: ['transform-decorators-legacy', 'syntax-dynamic-import'],
 					},
 				},
 			},

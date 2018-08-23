@@ -1,4 +1,4 @@
-class AnotherCtrl {
+class AnotherController {
 	/**
 	 * Função que soma dois numeros
 	 * @param {string} numero - Numero 1
@@ -21,4 +21,5 @@ class AnotherCtrl {
 	}
 }
 
-export default AnotherCtrl;
+AnotherController.$inject = ['$log'];
+export default AnotherController;

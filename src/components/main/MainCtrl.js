@@ -1,20 +1,34 @@
-/* global $ */
 // @flow
 import './main.css';
-import _ from 'lodash';
-import Data from './data';
+import { Controller } from '../../decorators';
+
+declare var $: any;
+
+class FatherController {
+	$log: any;
+
+	constructor(args: Array<any>, viewName: string) {
+		this.$log.log(args);
+		this.$log.log(viewName);
+	}
+}
 
 /**
  * Teste
  * @constructor
  */
-class MainControler {
+@Controller({ viewName: 'AnotherView' })
+class MainController extends FatherController {
 	value: number;
 
 	$log: any;
 
-	constructor(...args) {
-		Object.assign(this, _.object(MainControler.$inject, args));
+	title: string;
+
+	static $inject: Array<string>;
+
+	onInit() {
+		this.$log.log('TOOOOP');
 		this.title = 'HelloWorld!!!';
 		this.$log.log('teste11111111');
 		$('#teste').kendoComboBox({
@@ -24,7 +38,7 @@ class MainControler {
 		});
 	}
 
-	static getFullName(user) {
+	static getFullName(user: {firstName: string, lastName: string}) {
 		const { firstName, lastName } = user;
 		return `${firstName} ${lastName}`;
 	}
@@ -40,11 +54,11 @@ class MainControler {
 	static getComboOptions() {
 		return {
 			dataSource: {
-				data: Data,
+				data: [-1, 0, 1],
 			},
 		};
 	}
 }
 
-MainControler.$inject = ['$log'];
-export default MainControler;
+MainController.$inject = ['$log'];
+export default MainController;
