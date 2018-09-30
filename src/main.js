@@ -15,7 +15,7 @@ import '@progress/kendo-ui/js/kendo.angular';
 import 'angular-ui-router';
 
 import config from './config';
-import loginModule from '../login';
+import loginModule from './login';
 import AnotherController from './components/another/AnotherCtrl';
 import MainController from './components/main/MainCtrl';
 

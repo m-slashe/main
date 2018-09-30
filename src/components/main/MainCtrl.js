@@ -30,7 +30,7 @@ class MainController extends FatherController {
 	onInit() {
 		this.$log.log('TOOOOP');
 		this.title = 'HelloWorld!!!';
-		this.$log.log('teste11111111');
+		this.$log.log('teste1111111151');
 		$('#teste').kendoComboBox({
 			dataSource: {
 				data: [-1, 0, 1],

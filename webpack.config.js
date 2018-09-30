@@ -11,7 +11,12 @@ module.exports = {
 		'babel-polyfill': 'babel-polyfill',
 		main: './src/main.js',
 	},
-	devtool: 'sourcemap',
+	devtool: isProduction ? 'hidden-source-map' : 'eval-source-map',
+	devServer: {
+		host: '0.0.0.0',
+		port: 8080,
+		hot: true
+	},
 	output: {
 		filename: `[name].[${hash}].js`,
 	},
