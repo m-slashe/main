@@ -1,9 +1,7 @@
 class LoginCtrl {
-
-    constructor(){
-        this.title = 'LoginCtrl!!!';
-    }
-
+	constructor() {
+		this.title = 'LoginCtrl!!!';
+	}
 }
 
 export default LoginCtrl;
