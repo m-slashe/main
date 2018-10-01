@@ -6,9 +6,12 @@
   "scripts": {
     "docs": "documentation build src/** -f html -o docs",
     "test": "karma start",
-    "start": "webpack-dev-server --inline --mode development",
+    "startt": "webpack-dev-server --inline --hot --open --mode development",
+    "prestart": "node build/build-artifacts && docker build --target development -t dev . && node build/undo-build-artifacts.js",
+    "start": "docker run -v $PWD:/usr/src/app/ -p 8080:8080 dev",
     "build": "webpack --mode production",
-    "lint": "eslint src/**/*.js --fix"
+    "lint": "eslint src/**/*.js --fix",
+    "docker-build": "echo teste && docker build --target development -t dev ."
   },
   "husky": {
     "hooks": {

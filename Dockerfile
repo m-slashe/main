@@ -8,7 +8,7 @@ RUN npm ci --verbose
 
 EXPOSE 8080
 
-CMD npm start
+CMD npm run startt
 
 FROM node:8.12-alpine as builder
 
